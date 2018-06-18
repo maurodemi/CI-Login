@@ -37,22 +37,21 @@ class Model extends CI_Model {
 
         $i=0;
         $find=0;
+        //Faccio un ciclo per verificare se trovo una corrispondenza nel db con l'email inserita dall'utente per registrarsi.
         while(($find==0)&&($i<sizeof($query))) {
             if($data['email']==$query[$i]->email) {
-                $find=1;
-                //echo "<script language='javascript'>alert('Trovato!');</script>";
+                $find=1; //Setto il flag a 1 perchè ho trovato una corrispondenza nel db.
             }
             else {
                 $i++;
             }
         }
-        if($find==0) {
+        if($find==0) { //Se non ho trovato una email corrispondente nel db, allora faccio la insert dell'utente del db.
             //Faccio una query per salvare nel db i dati inseriti dall'utente che sono contenuti nell'array $data.
             $this->db->insert($table,$data);
             return true;
         }
-        else {
-            //echo "<script language='javascript'>alert('non inserisco!');</script>";
+        else { //La mail è già presente nel db, allora non iscrivo l'utente.
             return false;
         }
     }

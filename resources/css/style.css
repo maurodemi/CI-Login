@@ -80,3 +80,10 @@ input {
     border-radius: 4px;
     float: right;
 }
+
+.btnLogout:hover {
+    background-color: #409ad5;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #000; /*corrisponde a: border-width: 1px; border-style: solid; border-color: #000;*/
+}

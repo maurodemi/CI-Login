@@ -20,7 +20,10 @@ class Welcome extends CI_Controller {
 //    }
 
 	public function index() {
-		$this->load->view('login');
+        $info['title']="Login"; //Creo un array per passare il titolo alla view 'header'.
+        $this->load->view('header',$info); //Carico la view 'header'.
+        $this->load->view('login'); //Carico la view 'login'.
+        $this->load->view('footer'); //Carico la view 'footer'.
 
 //        if($this->session->userdata('logged_in')) {
 //            redirect('welcome','refresh');
@@ -63,11 +66,17 @@ class Welcome extends CI_Controller {
     }
 
     public function loginFree() {
-        $this->load->view('home');
+        $info['title']="Home"; //Creo un array per passare il titolo alla view 'header'.
+        $this->load->view('header',$info); //Carico la view 'header'.
+        $this->load->view('home'); //Carico la view 'home'.
+        $this->load->view('footer'); //Carico la view 'footer'.
     }
 
     public function signin() {
-        $this->load->view('signin');
+        $info['title']="Signin"; //Creo un array per passare il titolo alla view 'header'.
+        $this->load->view('header',$info); //Carico la view 'header'.
+        $this->load->view('signin'); //Carico la view 'signin'.
+        $this->load->view('footer'); //Carico la view 'footer'.$this->load->view('home');
     }
 
     public function access() {
@@ -124,17 +133,26 @@ class Welcome extends CI_Controller {
 //                    echo "<script language='javascript'>alert('Error!');</script>";
 //                    show_error($this->email->print_debugger());
 //                }
-                $this->load->view('home');
+                $info['title']="Home"; //Creo un array per passare il titolo alla view 'header'.
+                $this->load->view('header',$info); //Carico la view 'header'.
+                $this->load->view('home'); //Carico la view 'home'.
+                $this->load->view('footer'); //Carico la view 'footer'.$this->load->view('home');
             } else {
                 echo "<script language='javascript'>alert('Error! User not saved!');</script>";
-                $this->load->view('signin');
+                $info['title']="Signin"; //Creo un array per passare il titolo alla view 'header'.
+                $this->load->view('header',$info); //Carico la view 'header'.
+                $this->load->view('signin'); //Carico la view 'signin'.
+                $this->load->view('footer'); //Carico la view 'footer'.$this->load->view('home');
             }
 
         }
     }
 
     public function logout() {
-        $this->load->view('login');
+        $info['title']="Login"; //Creo un array per passare il titolo alla view 'header'.
+        $this->load->view('header',$info); //Carico la view 'header'.
+        $this->load->view('login'); //Carico la view 'login'.
+        $this->load->view('footer'); //Carico la view 'footer'.
     }
 
 }

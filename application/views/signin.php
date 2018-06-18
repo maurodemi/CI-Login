@@ -8,32 +8,13 @@
     defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Sign in</title>
 
-    <meta charset="utf-8">
-    <!--Descrizione del sito-->
-    <meta name="description" content="E' una applicazione per la gestione di iscrizione e accesso a un portale">
-    <!--Parole chiave che servono per la ricerca degli utenti-->
-    <meta name="keywords" content="iscriviti, accedi">
-    <!--Serve per rendere il sito responsive-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--header.php-->
 
-    <!--Serve per mettere una icona vicino al titolo della scheda-->
-    <link rel="icon" href="">
-
-    <!--Link al cdn di bootstrap-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <!--Link al foglio di stile css-->
-    <link rel="stylesheet" href="<?php echo $this->config->item('resources')['css']?>/style.css">
-</head>
-
-<body>
     <header> <!--Header-->
         <h1></h1>
     </header>
+
     <div class="login"> <!--Registrazione-->
         <h1>Sign in</h1>
         <form action="<?php echo site_url('welcome/access'); ?>" method="post">
@@ -77,8 +58,9 @@
         <br>
         <a href="<?php echo site_url('welcome/login'); ?>"><button class="btn">Login</button></a>
     </div>
+
     <footer> <!--Footer-->
         <p></p>
     </footer>
-</body>
-</html>
+
+<!--footer.php-->
